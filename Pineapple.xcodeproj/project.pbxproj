@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78B0D2001C373A5C001CB717 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D1FF1C373A5C001CB717 /* main.m */; };
+		78B0D2031C373A5C001CB717 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2021C373A5C001CB717 /* AppDelegate.m */; };
+		78B0D2061C373A5C001CB717 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2051C373A5C001CB717 /* FirstViewController.m */; };
+		78B0D2091C373A5C001CB717 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2081C373A5C001CB717 /* SecondViewController.m */; };
+		78B0D20C1C373A5C001CB717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B0D20A1C373A5C001CB717 /* Main.storyboard */; };
+		78B0D20E1C373A5C001CB717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78B0D20D1C373A5C001CB717 /* Assets.xcassets */; };
+		78B0D2111C373A5C001CB717 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B0D20F1C373A5C001CB717 /* LaunchScreen.storyboard */; };
+		78B0D21C1C373A5C001CB717 /* PineappleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D21B1C373A5C001CB717 /* PineappleTests.m */; };
+		78B0D2271C373A5C001CB717 /* PineappleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2261C373A5C001CB717 /* PineappleUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		78B0D2181C373A5C001CB717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78B0D1F31C373A5C001CB717 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78B0D1FA1C373A5C001CB717;
+			remoteInfo = Pineapple;
+		};
+		78B0D2231C373A5C001CB717 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78B0D1F31C373A5C001CB717 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78B0D1FA1C373A5C001CB717;
+			remoteInfo = Pineapple;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		78B0D1FB1C373A5C001CB717 /* Pineapple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pineapple.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78B0D1FF1C373A5C001CB717 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		78B0D2011C373A5C001CB717 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		78B0D2021C373A5C001CB717 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		78B0D2041C373A5C001CB717 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		78B0D2051C373A5C001CB717 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		78B0D2071C373A5C001CB717 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		78B0D2081C373A5C001CB717 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		78B0D20B1C373A5C001CB717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		78B0D20D1C373A5C001CB717 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78B0D2101C373A5C001CB717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78B0D2121C373A5C001CB717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78B0D2171C373A5C001CB717 /* PineappleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PineappleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78B0D21B1C373A5C001CB717 /* PineappleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PineappleTests.m; sourceTree = "<group>"; };
+		78B0D21D1C373A5C001CB717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78B0D2221C373A5C001CB717 /* PineappleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PineappleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78B0D2261C373A5C001CB717 /* PineappleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PineappleUITests.m; sourceTree = "<group>"; };
+		78B0D2281C373A5C001CB717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78B0D1F81C373A5C001CB717 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78B0D2141C373A5C001CB717 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78B0D21F1C373A5C001CB717 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78B0D1F21C373A5C001CB717 = {
+			isa = PBXGroup;
+			children = (
+				78B0D1FD1C373A5C001CB717 /* Pineapple */,
+				78B0D21A1C373A5C001CB717 /* PineappleTests */,
+				78B0D2251C373A5C001CB717 /* PineappleUITests */,
+				78B0D1FC1C373A5C001CB717 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		78B0D1FC1C373A5C001CB717 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78B0D1FB1C373A5C001CB717 /* Pineapple.app */,
+				78B0D2171C373A5C001CB717 /* PineappleTests.xctest */,
+				78B0D2221C373A5C001CB717 /* PineappleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78B0D1FD1C373A5C001CB717 /* Pineapple */ = {
+			isa = PBXGroup;
+			children = (
+				78B0D2011C373A5C001CB717 /* AppDelegate.h */,
+				78B0D2021C373A5C001CB717 /* AppDelegate.m */,
+				78B0D2041C373A5C001CB717 /* FirstViewController.h */,
+				78B0D2051C373A5C001CB717 /* FirstViewController.m */,
+				78B0D2071C373A5C001CB717 /* SecondViewController.h */,
+				78B0D2081C373A5C001CB717 /* SecondViewController.m */,
+				78B0D20A1C373A5C001CB717 /* Main.storyboard */,
+				78B0D20D1C373A5C001CB717 /* Assets.xcassets */,
+				78B0D20F1C373A5C001CB717 /* LaunchScreen.storyboard */,
+				78B0D2121C373A5C001CB717 /* Info.plist */,
+				78B0D1FE1C373A5C001CB717 /* Supporting Files */,
+			);
+			path = Pineapple;
+			sourceTree = "<group>";
+		};
+		78B0D1FE1C373A5C001CB717 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				78B0D1FF1C373A5C001CB717 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78B0D21A1C373A5C001CB717 /* PineappleTests */ = {
+			isa = PBXGroup;
+			children = (
+				78B0D21B1C373A5C001CB717 /* PineappleTests.m */,
+				78B0D21D1C373A5C001CB717 /* Info.plist */,
+			);
+			path = PineappleTests;
+			sourceTree = "<group>";
+		};
+		78B0D2251C373A5C001CB717 /* PineappleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				78B0D2261C373A5C001CB717 /* PineappleUITests.m */,
+				78B0D2281C373A5C001CB717 /* Info.plist */,
+			);
+			path = PineappleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78B0D1FA1C373A5C001CB717 /* Pineapple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78B0D22B1C373A5C001CB717 /* Build configuration list for PBXNativeTarget "Pineapple" */;
+			buildPhases = (
+				78B0D1F71C373A5C001CB717 /* Sources */,
+				78B0D1F81C373A5C001CB717 /* Frameworks */,
+				78B0D1F91C373A5C001CB717 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pineapple;
+			productName = Pineapple;
+			productReference = 78B0D1FB1C373A5C001CB717 /* Pineapple.app */;
+			productType = "com.apple.product-type.application";
+		};
+		78B0D2161C373A5C001CB717 /* PineappleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78B0D22E1C373A5C001CB717 /* Build configuration list for PBXNativeTarget "PineappleTests" */;
+			buildPhases = (
+				78B0D2131C373A5C001CB717 /* Sources */,
+				78B0D2141C373A5C001CB717 /* Frameworks */,
+				78B0D2151C373A5C001CB717 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78B0D2191C373A5C001CB717 /* PBXTargetDependency */,
+			);
+			name = PineappleTests;
+			productName = PineappleTests;
+			productReference = 78B0D2171C373A5C001CB717 /* PineappleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		78B0D2211C373A5C001CB717 /* PineappleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78B0D2311C373A5C001CB717 /* Build configuration list for PBXNativeTarget "PineappleUITests" */;
+			buildPhases = (
+				78B0D21E1C373A5C001CB717 /* Sources */,
+				78B0D21F1C373A5C001CB717 /* Frameworks */,
+				78B0D2201C373A5C001CB717 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78B0D2241C373A5C001CB717 /* PBXTargetDependency */,
+			);
+			name = PineappleUITests;
+			productName = PineappleUITests;
+			productReference = 78B0D2221C373A5C001CB717 /* PineappleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78B0D1F31C373A5C001CB717 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = user;
+				TargetAttributes = {
+					78B0D1FA1C373A5C001CB717 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					78B0D2161C373A5C001CB717 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 78B0D1FA1C373A5C001CB717;
+					};
+					78B0D2211C373A5C001CB717 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 78B0D1FA1C373A5C001CB717;
+					};
+				};
+			};
+			buildConfigurationList = 78B0D1F61C373A5C001CB717 /* Build configuration list for PBXProject "Pineapple" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78B0D1F21C373A5C001CB717;
+			productRefGroup = 78B0D1FC1C373A5C001CB717 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78B0D1FA1C373A5C001CB717 /* Pineapple */,
+				78B0D2161C373A5C001CB717 /* PineappleTests */,
+				78B0D2211C373A5C001CB717 /* PineappleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78B0D1F91C373A5C001CB717 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B0D2111C373A5C001CB717 /* LaunchScreen.storyboard in Resources */,
+				78B0D20E1C373A5C001CB717 /* Assets.xcassets in Resources */,
+				78B0D20C1C373A5C001CB717 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78B0D2151C373A5C001CB717 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78B0D2201C373A5C001CB717 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78B0D1F71C373A5C001CB717 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B0D2091C373A5C001CB717 /* SecondViewController.m in Sources */,
+				78B0D2031C373A5C001CB717 /* AppDelegate.m in Sources */,
+				78B0D2061C373A5C001CB717 /* FirstViewController.m in Sources */,
+				78B0D2001C373A5C001CB717 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78B0D2131C373A5C001CB717 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B0D21C1C373A5C001CB717 /* PineappleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78B0D21E1C373A5C001CB717 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B0D2271C373A5C001CB717 /* PineappleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		78B0D2191C373A5C001CB717 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78B0D1FA1C373A5C001CB717 /* Pineapple */;
+			targetProxy = 78B0D2181C373A5C001CB717 /* PBXContainerItemProxy */;
+		};
+		78B0D2241C373A5C001CB717 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78B0D1FA1C373A5C001CB717 /* Pineapple */;
+			targetProxy = 78B0D2231C373A5C001CB717 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		78B0D20A1C373A5C001CB717 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78B0D20B1C373A5C001CB717 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		78B0D20F1C373A5C001CB717 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78B0D2101C373A5C001CB717 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78B0D2291C373A5C001CB717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		78B0D22A1C373A5C001CB717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78B0D22C1C373A5C001CB717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Pineapple/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nansoft.Pineapple;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		78B0D22D1C373A5C001CB717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Pineapple/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nansoft.Pineapple;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		78B0D22F1C373A5C001CB717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PineappleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nansoft.PineappleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pineapple.app/Pineapple";
+			};
+			name = Debug;
+		};
+		78B0D2301C373A5C001CB717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PineappleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nansoft.PineappleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pineapple.app/Pineapple";
+			};
+			name = Release;
+		};
+		78B0D2321C373A5C001CB717 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PineappleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nansoft.PineappleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Pineapple;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		78B0D2331C373A5C001CB717 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PineappleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nansoft.PineappleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Pineapple;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78B0D1F61C373A5C001CB717 /* Build configuration list for PBXProject "Pineapple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78B0D2291C373A5C001CB717 /* Debug */,
+				78B0D22A1C373A5C001CB717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78B0D22B1C373A5C001CB717 /* Build configuration list for PBXNativeTarget "Pineapple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78B0D22C1C373A5C001CB717 /* Debug */,
+				78B0D22D1C373A5C001CB717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		78B0D22E1C373A5C001CB717 /* Build configuration list for PBXNativeTarget "PineappleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78B0D22F1C373A5C001CB717 /* Debug */,
+				78B0D2301C373A5C001CB717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		78B0D2311C373A5C001CB717 /* Build configuration list for PBXNativeTarget "PineappleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78B0D2321C373A5C001CB717 /* Debug */,
+				78B0D2331C373A5C001CB717 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78B0D1F31C373A5C001CB717 /* Project object */;
+}
