@@ -16,6 +16,15 @@
 		78B0D2111C373A5C001CB717 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B0D20F1C373A5C001CB717 /* LaunchScreen.storyboard */; };
 		78B0D21C1C373A5C001CB717 /* PineappleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D21B1C373A5C001CB717 /* PineappleTests.m */; };
 		78B0D2271C373A5C001CB717 /* PineappleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2261C373A5C001CB717 /* PineappleUITests.m */; };
+		78B0D2491C3742BC001CB717 /* F3RPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2481C3742BC001CB717 /* F3RPost.m */; };
+		78B0D24C1C3742E7001CB717 /* F3RCustomPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D24B1C3742E7001CB717 /* F3RCustomPost.m */; };
+		78B0D24F1C37431A001CB717 /* F3RComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D24E1C37431A001CB717 /* F3RComment.m */; };
+		78B0D2521C37433B001CB717 /* F3RCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2511C37433B001CB717 /* F3RCategory.m */; };
+		78B0D2551C37436F001CB717 /* F3RCustomComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2541C37436F001CB717 /* F3RCustomComment.m */; };
+		78B0D2581C3743C4001CB717 /* F3RNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2571C3743C4001CB717 /* F3RNotification.m */; };
+		78B0D25B1C37441F001CB717 /* F3RReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D25A1C37441F001CB717 /* F3RReport.m */; };
+		78B0D25E1C374454001CB717 /* F3RUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D25D1C374454001CB717 /* F3RUser.m */; };
+		78B0D2611C3744AC001CB717 /* F3RFacebookUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2601C3744AC001CB717 /* F3RFacebookUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +63,24 @@
 		78B0D2221C373A5C001CB717 /* PineappleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PineappleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78B0D2261C373A5C001CB717 /* PineappleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PineappleUITests.m; sourceTree = "<group>"; };
 		78B0D2281C373A5C001CB717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78B0D2471C3742BC001CB717 /* F3RPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RPost.h; sourceTree = "<group>"; };
+		78B0D2481C3742BC001CB717 /* F3RPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RPost.m; sourceTree = "<group>"; };
+		78B0D24A1C3742E7001CB717 /* F3RCustomPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RCustomPost.h; sourceTree = "<group>"; };
+		78B0D24B1C3742E7001CB717 /* F3RCustomPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RCustomPost.m; sourceTree = "<group>"; };
+		78B0D24D1C37431A001CB717 /* F3RComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RComment.h; sourceTree = "<group>"; };
+		78B0D24E1C37431A001CB717 /* F3RComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RComment.m; sourceTree = "<group>"; };
+		78B0D2501C37433B001CB717 /* F3RCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RCategory.h; sourceTree = "<group>"; };
+		78B0D2511C37433B001CB717 /* F3RCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RCategory.m; sourceTree = "<group>"; };
+		78B0D2531C37436F001CB717 /* F3RCustomComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RCustomComment.h; sourceTree = "<group>"; };
+		78B0D2541C37436F001CB717 /* F3RCustomComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RCustomComment.m; sourceTree = "<group>"; };
+		78B0D2561C3743C4001CB717 /* F3RNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RNotification.h; sourceTree = "<group>"; };
+		78B0D2571C3743C4001CB717 /* F3RNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RNotification.m; sourceTree = "<group>"; };
+		78B0D2591C37441F001CB717 /* F3RReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RReport.h; sourceTree = "<group>"; };
+		78B0D25A1C37441F001CB717 /* F3RReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RReport.m; sourceTree = "<group>"; };
+		78B0D25C1C374454001CB717 /* F3RUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RUser.h; sourceTree = "<group>"; };
+		78B0D25D1C374454001CB717 /* F3RUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RUser.m; sourceTree = "<group>"; };
+		78B0D25F1C3744AC001CB717 /* F3RFacebookUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RFacebookUser.h; sourceTree = "<group>"; };
+		78B0D2601C3744AC001CB717 /* F3RFacebookUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RFacebookUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +131,7 @@
 		78B0D1FD1C373A5C001CB717 /* Pineapple */ = {
 			isa = PBXGroup;
 			children = (
+				78B0D2371C373EF8001CB717 /* Model */,
 				78B0D2011C373A5C001CB717 /* AppDelegate.h */,
 				78B0D2021C373A5C001CB717 /* AppDelegate.m */,
 				78B0D2041C373A5C001CB717 /* FirstViewController.h */,
@@ -143,6 +171,31 @@
 				78B0D2281C373A5C001CB717 /* Info.plist */,
 			);
 			path = PineappleUITests;
+			sourceTree = "<group>";
+		};
+		78B0D2371C373EF8001CB717 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78B0D2471C3742BC001CB717 /* F3RPost.h */,
+				78B0D2481C3742BC001CB717 /* F3RPost.m */,
+				78B0D24A1C3742E7001CB717 /* F3RCustomPost.h */,
+				78B0D24B1C3742E7001CB717 /* F3RCustomPost.m */,
+				78B0D24D1C37431A001CB717 /* F3RComment.h */,
+				78B0D24E1C37431A001CB717 /* F3RComment.m */,
+				78B0D2501C37433B001CB717 /* F3RCategory.h */,
+				78B0D2511C37433B001CB717 /* F3RCategory.m */,
+				78B0D2531C37436F001CB717 /* F3RCustomComment.h */,
+				78B0D2541C37436F001CB717 /* F3RCustomComment.m */,
+				78B0D2561C3743C4001CB717 /* F3RNotification.h */,
+				78B0D2571C3743C4001CB717 /* F3RNotification.m */,
+				78B0D2591C37441F001CB717 /* F3RReport.h */,
+				78B0D25A1C37441F001CB717 /* F3RReport.m */,
+				78B0D25C1C374454001CB717 /* F3RUser.h */,
+				78B0D25D1C374454001CB717 /* F3RUser.m */,
+				78B0D25F1C3744AC001CB717 /* F3RFacebookUser.h */,
+				78B0D2601C3744AC001CB717 /* F3RFacebookUser.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,9 +328,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B0D2491C3742BC001CB717 /* F3RPost.m in Sources */,
+				78B0D24F1C37431A001CB717 /* F3RComment.m in Sources */,
+				78B0D25B1C37441F001CB717 /* F3RReport.m in Sources */,
+				78B0D2551C37436F001CB717 /* F3RCustomComment.m in Sources */,
+				78B0D24C1C3742E7001CB717 /* F3RCustomPost.m in Sources */,
 				78B0D2091C373A5C001CB717 /* SecondViewController.m in Sources */,
+				78B0D25E1C374454001CB717 /* F3RUser.m in Sources */,
 				78B0D2031C373A5C001CB717 /* AppDelegate.m in Sources */,
+				78B0D2521C37433B001CB717 /* F3RCategory.m in Sources */,
 				78B0D2061C373A5C001CB717 /* FirstViewController.m in Sources */,
+				78B0D2581C3743C4001CB717 /* F3RNotification.m in Sources */,
+				78B0D2611C3744AC001CB717 /* F3RFacebookUser.m in Sources */,
 				78B0D2001C373A5C001CB717 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
