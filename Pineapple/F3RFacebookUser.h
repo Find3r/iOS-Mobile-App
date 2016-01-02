@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+
+
+
 @interface F3RData2 : NSObject
 
 @property (strong, nonatomic) NSString *url;
@@ -37,8 +40,10 @@
 @property (strong, nonatomic) NSString *link;
 @property (strong, nonatomic) F3RData *picture;
 @property (strong, nonatomic) F3RCoverPhoto *cover;
++ (F3RFacebookUser *) user;
 
 @end
+
 
 
 

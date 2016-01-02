@@ -50,18 +50,15 @@
                 else
                 {
                        
-                    F3RFacebookUser *user = [[F3RFacebookUser alloc] init];
-                       
                     for (NSString *key in result) {
-                        if ([user respondsToSelector:NSSelectorFromString(key)]) {
-                            [user setValue:[result valueForKey:key] forKey:key];
+                        if ([F3RFacebookUser.user respondsToSelector:NSSelectorFromString(key)]) {
+                            [F3RFacebookUser.user setValue:[result valueForKey:key] forKey:key];
                         }
                     }
-                
-                    NSLog(@"%@",user.name);
+                    
+                    NSLog(@"%@",F3RFacebookUser.user.name);
                        
                 }
-                   
                    
             }];
 
