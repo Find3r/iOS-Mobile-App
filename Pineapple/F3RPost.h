@@ -12,8 +12,9 @@
 
 @property (strong, nonatomic) NSString *id;
 @property (strong, nonatomic) NSString *nombre;
+@property (strong, nonatomic) NSString *descripcion;
 @property (strong, nonatomic) NSString *urlimagen;
-@property (strong, nonatomic) NSString *fechadesaparicion;
+@property (strong, nonatomic) NSDate *fechadesaparicion;
 @property (strong, nonatomic) NSString *idusuario;
 @property (strong, nonatomic) NSString *idestado;
 @property (strong, nonatomic) NSString *idcategoria;
@@ -21,6 +22,6 @@
 @property (strong, nonatomic) NSNumber *cantidad_reportes;
 @property (strong, nonatomic) NSString *latitud;
 @property (strong, nonatomic) NSString *longitud;
-@property ( nonatomic) bool *solved;
+@property (strong, nonatomic) NSNumber *solved;
 
 @end

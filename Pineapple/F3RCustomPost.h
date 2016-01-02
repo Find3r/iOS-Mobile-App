@@ -14,6 +14,6 @@
 @property (strong, nonatomic) NSString *urlimagen_perfil_usuario;
 @property (strong, nonatomic) NSString *nombre_provincia;
 @property (strong, nonatomic) NSNumber *cantidad_comentarios;
-@property (nonatomic) bool *estado_follow;
+@property (strong, nonatomic) NSNumber *estado_follow;
 
 @end
