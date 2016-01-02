@@ -25,6 +25,8 @@
 		78B0D25B1C37441F001CB717 /* F3RReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D25A1C37441F001CB717 /* F3RReport.m */; };
 		78B0D25E1C374454001CB717 /* F3RUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D25D1C374454001CB717 /* F3RUser.m */; };
 		78B0D2611C3744AC001CB717 /* F3RFacebookUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2601C3744AC001CB717 /* F3RFacebookUser.m */; };
+		78B0D2651C3748E8001CB717 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2641C3748E8001CB717 /* LoginViewController.m */; };
+		78B0D2681C374BA4001CB717 /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B0D2671C374BA4001CB717 /* WindowsAzureMobileServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,9 @@
 		78B0D25D1C374454001CB717 /* F3RUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RUser.m; sourceTree = "<group>"; };
 		78B0D25F1C3744AC001CB717 /* F3RFacebookUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RFacebookUser.h; sourceTree = "<group>"; };
 		78B0D2601C3744AC001CB717 /* F3RFacebookUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RFacebookUser.m; sourceTree = "<group>"; };
+		78B0D2631C3748E8001CB717 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		78B0D2641C3748E8001CB717 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		78B0D2671C374BA4001CB717 /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B0D2681C374BA4001CB717 /* WindowsAzureMobileServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +137,8 @@
 		78B0D1FD1C373A5C001CB717 /* Pineapple */ = {
 			isa = PBXGroup;
 			children = (
+				78B0D2661C374B8F001CB717 /* Framework */,
+				78B0D2621C3748C6001CB717 /* Controller */,
 				78B0D2371C373EF8001CB717 /* Model */,
 				78B0D2011C373A5C001CB717 /* AppDelegate.h */,
 				78B0D2021C373A5C001CB717 /* AppDelegate.m */,
@@ -196,6 +204,23 @@
 				78B0D2601C3744AC001CB717 /* F3RFacebookUser.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		78B0D2621C3748C6001CB717 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				78B0D2631C3748E8001CB717 /* LoginViewController.h */,
+				78B0D2641C3748E8001CB717 /* LoginViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		78B0D2661C374B8F001CB717 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				78B0D2671C374BA4001CB717 /* WindowsAzureMobileServices.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +357,7 @@
 				78B0D24F1C37431A001CB717 /* F3RComment.m in Sources */,
 				78B0D25B1C37441F001CB717 /* F3RReport.m in Sources */,
 				78B0D2551C37436F001CB717 /* F3RCustomComment.m in Sources */,
+				78B0D2651C3748E8001CB717 /* LoginViewController.m in Sources */,
 				78B0D24C1C3742E7001CB717 /* F3RCustomPost.m in Sources */,
 				78B0D2091C373A5C001CB717 /* SecondViewController.m in Sources */,
 				78B0D25E1C374454001CB717 /* F3RUser.m in Sources */,
@@ -479,6 +505,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pineapple",
+				);
 				INFOPLIST_FILE = Pineapple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nansoft.Pineapple;
@@ -490,6 +520,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pineapple",
+				);
 				INFOPLIST_FILE = Pineapple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nansoft.Pineapple;

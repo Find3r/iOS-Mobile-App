@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
+#import "F3RUser.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) MSClient *client;
+@property (strong, nonatomic) F3RUser *user;
 
 @end
 
