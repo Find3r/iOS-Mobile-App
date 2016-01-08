@@ -12,6 +12,11 @@
 #import "F3RLastPostTableViewCell.h"
 #import "F3RCustomPost.h"
 #import "F3RFacebookUser.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
+#define FONT_SIZE 14.0f
+#define CELL_CONTENT_WIDTH 320.0f
+#define CELL_CONTENT_MARGIN 10.0f
 
 @interface F3RLastPostViewController ()
 {
@@ -103,6 +108,9 @@
     return collection.count;
 }
 
+
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 1;
@@ -144,18 +152,34 @@
     [cell.lblPostName setText:post.nombre];
     [cell.lblDate setText:[NSString stringWithFormat:@"Fecha: %@",[dateFormat stringFromDate:post.fechadesaparicion]]];
     [cell.lblDescription setText:post.descripcion];
+    
+    [cell.imgPost sd_setImageWithURL:[NSURL URLWithString:post.urlimagen]
+                    placeholderImage:[UIImage imageNamed:@"picture.png"]];
+
+    [cell.imgUser sd_setImageWithURL:[NSURL URLWithString:post.urlimagen_perfil_usuario]
+                    placeholderImage:[UIImage imageNamed:@"picture.png"]];
+    
+    [cell.imgUser.layer setCornerRadius: cell.imgUser.frame.size.width / 2];
+    
+    [cell.imgUser setClipsToBounds:YES];
+    
+    
+    NSLog(@"%@",post.urlimagen_perfil_usuario);
+
     /*
+     
+     
     
     [cell.lblDate setText:[NSString stringWithFormat:@"Fecha: %@",[dateFormat stringFromDate:event.fecha_aux]]];
     [cell.lblHour setText:[NSString stringWithFormat:@"Hora: %@",event.hora]];
     [cell.lblAmount setText:[NSString stringWithFormat:@"Costo: %@",event.costo]];
     
-    [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:event.urlimagen]
-                    placeholderImage:[UIImage imageNamed:@"picture.png"]];
-    */
+       */
     
     
     //[cell.layer setCornerRadius:35.0f];
+    
+    [cell updateConstraintsIfNeeded];
     
     return cell;
 }

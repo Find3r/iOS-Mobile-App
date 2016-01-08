@@ -37,6 +37,8 @@
 		78B0D27E1C375B8C001CB717 /* F3RLastPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D27D1C375B8C001CB717 /* F3RLastPostTableViewCell.m */; };
 		78B0D2811C375CC3001CB717 /* F3RLastPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2801C375CC3001CB717 /* F3RLastPostViewController.m */; };
 		78B0D2841C375CE4001CB717 /* F3RLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2831C375CE4001CB717 /* F3RLoginViewController.m */; };
+		78CDFC611C3EDA3F00D7C6BE /* options.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CDFC601C3EDA3F00D7C6BE /* options.png */; };
+		78CDFC631C3EDB1900D7C6BE /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CDFC621C3EDB1900D7C6BE /* calendar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		78B0D2801C375CC3001CB717 /* F3RLastPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RLastPostViewController.m; sourceTree = "<group>"; };
 		78B0D2821C375CE4001CB717 /* F3RLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RLoginViewController.h; sourceTree = "<group>"; };
 		78B0D2831C375CE4001CB717 /* F3RLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RLoginViewController.m; sourceTree = "<group>"; };
+		78CDFC601C3EDA3F00D7C6BE /* options.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = options.png; sourceTree = "<group>"; };
+		78CDFC621C3EDB1900D7C6BE /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
 		F8D1B7554A7A1593D9C6B747 /* libPods-Pineapple.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pineapple.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -266,6 +270,8 @@
 		78B0D2691C375A62001CB717 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				78CDFC621C3EDB1900D7C6BE /* calendar.png */,
+				78CDFC601C3EDA3F00D7C6BE /* options.png */,
 				78B0D2761C375A80001CB717 /* comment.png */,
 				78B0D26A1C375A70001CB717 /* follow.png */,
 				78B0D26B1C375A70001CB717 /* found.png */,
@@ -401,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78B0D2731C375A70001CB717 /* solved.png in Resources */,
+				78CDFC631C3EDB1900D7C6BE /* calendar.png in Resources */,
 				78B0D2701C375A70001CB717 /* follow.png in Resources */,
 				78B0D2711C375A70001CB717 /* found.png in Resources */,
 				78B0D2111C373A5C001CB717 /* LaunchScreen.storyboard in Resources */,
@@ -409,6 +416,7 @@
 				78B0D2741C375A70001CB717 /* unfollow.png in Resources */,
 				78B0D2771C375A80001CB717 /* comment.png in Resources */,
 				78B0D20C1C373A5C001CB717 /* Main.storyboard in Resources */,
+				78CDFC611C3EDA3F00D7C6BE /* options.png in Resources */,
 				78B0D2721C375A70001CB717 /* lost.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
