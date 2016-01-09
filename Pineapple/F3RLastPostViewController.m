@@ -230,14 +230,9 @@
     // se instancia el view controller
     F3RPostDetailViewController * view = [self.storyboard instantiateViewControllerWithIdentifier:@"post_info"];
     
-    // obtenemos el id de la fila seleccionada
-    NSIndexPath * myIndexPath = [self.tableView indexPathForSelectedRow];
-    
-    // obtenemos la posición
-    long row = [myIndexPath section];
     
     // obtenemos el objeto de la posición seleccionada
-    F3RCustomPost  *post = [collection objectAtIndex:row];
+    F3RCustomPost  *post = [collection objectAtIndex:gesture.view.tag];
     
     // pasamos el objeto a la vista de detalle
     view.post = post;
@@ -279,13 +274,7 @@
      */
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"Click indexPath");
-    // mostramos el segue
-    //[self performSegueWithIdentifier:@"eventDetail" sender:self];
-    
-}
+
 
 
 @end
