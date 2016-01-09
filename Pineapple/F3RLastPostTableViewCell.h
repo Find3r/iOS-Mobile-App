@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface F3RLastPostTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UIImageView *imgUser;
 @property (weak, nonatomic) IBOutlet UILabel *lblUserName;
 @property (weak, nonatomic) IBOutlet UIImageView *imgPost;
@@ -21,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgType;
 @property (weak, nonatomic) IBOutlet UIImageView *imgStatus;
 @property (weak, nonatomic) IBOutlet UIImageView *imgStatusFollow;
+@property (weak, nonatomic) IBOutlet UIImageView *imgComments;
 
 @end

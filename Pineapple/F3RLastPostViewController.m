@@ -13,15 +13,17 @@
 #import "F3RCustomPost.h"
 #import "F3RFacebookUser.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "F3RPostDetailViewController.h"
 
-#define FONT_SIZE 14.0f
-#define CELL_CONTENT_WIDTH 320.0f
-#define CELL_CONTENT_MARGIN 10.0f
 
 @interface F3RLastPostViewController ()
 {
     NSMutableArray *collection;
     NSDateFormatter *dateFormat;
+    
+    UITapGestureRecognizer *showDescriptionPostTap;
+    UITapGestureRecognizer *updateFollowStatusPostTap;
+    UITapGestureRecognizer *showCommentsPostTap;
 }
 @end
 
@@ -165,6 +167,24 @@
     
     F3RCustomPost  *post = [collection objectAtIndex:row];
     
+    [cell.imgPost setTag:row];
+    [cell.imgStatusFollow setTag:row];
+    [cell.imgComments setTag:row];
+    
+    // se verifica si ya hay un reconocedor
+    if (cell.imgPost.gestureRecognizers.count == 0)
+    {
+        showDescriptionPostTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showDescriptionPostGestureCaptured:)];
+        updateFollowStatusPostTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(updateStatusFollowPostGestureCaptured:)];
+        showCommentsPostTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showCommentsGestureCaptured:)];
+
+        
+        [cell.imgPost addGestureRecognizer:showDescriptionPostTap];
+        [cell.imgStatusFollow addGestureRecognizer:updateFollowStatusPostTap];
+        [cell.imgComments addGestureRecognizer:showCommentsPostTap];
+        
+    }
+    
     [cell.lblUserName setText:post.nombre_usuario];
     [cell.lblPostName setText:post.nombre];
     [cell.lblDate setText:[NSString stringWithFormat:@"Fecha: %@",[dateFormat stringFromDate:post.fechadesaparicion]]];
@@ -204,10 +224,46 @@
     
     return cell;
 }
-/*
+
+- (void)showDescriptionPostGestureCaptured:(UITapGestureRecognizer*)gesture{
+    
+    // se instancia el view controller
+    F3RPostDetailViewController * view = [self.storyboard instantiateViewControllerWithIdentifier:@"post_info"];
+    
+    // obtenemos el id de la fila seleccionada
+    NSIndexPath * myIndexPath = [self.tableView indexPathForSelectedRow];
+    
+    // obtenemos la posición
+    long row = [myIndexPath section];
+    
+    // obtenemos el objeto de la posición seleccionada
+    F3RCustomPost  *post = [collection objectAtIndex:row];
+    
+    // pasamos el objeto a la vista de detalle
+    view.post = post;
+
+    // se redirigue a la vista de detalle del post
+    [self.navigationController pushViewController:view animated:YES];
+
+}
+
+- (void)updateStatusFollowPostGestureCaptured:(UITapGestureRecognizer*)gesture{
+    
+    NSLog(@"Click Email");
+}
+
+- (void)showCommentsGestureCaptured:(UITapGestureRecognizer*)gesture{
+    
+    NSLog(@"Click Location");
+}
+
+
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSLog(@"Click prepareForSegue");
+
+    /*
     if([[segue identifier] isEqualToString:@"eventDetail"])
     {
         EventDetailViewController * view = [segue destinationViewController];
@@ -220,16 +276,17 @@
         
         view.event = event;
     }
+     */
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    NSLog(@"Click indexPath");
     // mostramos el segue
-    [self performSegueWithIdentifier:@"eventDetail" sender:self];
+    //[self performSegueWithIdentifier:@"eventDetail" sender:self];
     
 }
-*/
+
 
 @end
 
