@@ -71,14 +71,31 @@
                        F3RCustomPost *customPost = [[F3RCustomPost alloc] init];
                        
                        for (NSString *key in item) {
+                           
+                           
+                           
                            if ([customPost respondsToSelector:NSSelectorFromString(key)]) {
+                            
                                [customPost setValue:[item valueForKey:key] forKey:key];
                            }
+                           
+                         
+                       }
+                       
+                       if([item objectForKey:@"estado_follow"] == [NSNull null])
+                       {
+                           customPost.estado_follow = [NSNumber numberWithInt:0];
+                       }
+                       
+                       if([item objectForKey:@"cantidad_comentarios"] == [NSNull null])
+                       {
+                           customPost.cantidad_comentarios = [NSNumber numberWithInt:0];
                        }
                        
                        
                        [collection addObject:customPost];
                        
+                   
                    }
                    
                    [self.tableView reloadData];
@@ -151,35 +168,39 @@
     [cell.lblUserName setText:post.nombre_usuario];
     [cell.lblPostName setText:post.nombre];
     [cell.lblDate setText:[NSString stringWithFormat:@"Fecha: %@",[dateFormat stringFromDate:post.fechadesaparicion]]];
-    [cell.lblDescription setText:post.descripcion];
     
     [cell.imgPost sd_setImageWithURL:[NSURL URLWithString:post.urlimagen]
                     placeholderImage:[UIImage imageNamed:@"picture.png"]];
-
+    
+    // imagen perfil de usuario
     [cell.imgUser sd_setImageWithURL:[NSURL URLWithString:post.urlimagen_perfil_usuario]
                     placeholderImage:[UIImage imageNamed:@"picture.png"]];
     
+    // se establecen los bordes redondos
     [cell.imgUser.layer setCornerRadius: cell.imgUser.frame.size.width / 2];
-    
     [cell.imgUser setClipsToBounds:YES];
     
+    // se verifica cual imagen se debe desplegar, se utiliza un operador ternario
+    NSString * typeNameImage = [post.idestado isEqualToString:@"0"] ? @"found.png" : @"lost.png";
+    [cell.imgType setImage:[UIImage imageNamed:typeNameImage]];
     
-    NSLog(@"%@",post.urlimagen_perfil_usuario);
+    typeNameImage = [post.idestado isEqualToString:@"0"] ? @"Encontrad@" : @"Perdid@";
+    [cell.lblCategory setText:typeNameImage];
+    
+    typeNameImage = [post.solved isEqualToNumber:[NSNumber numberWithInt:0]] ? @"unsolved.png" : @"solved.png";
+    [cell.imgStatus setImage:[UIImage imageNamed:typeNameImage]];
+    
+    typeNameImage = [post.solved isEqualToNumber:[NSNumber numberWithInt:0]] ? @"Pendiente" : @"Resuelto";
+    [cell.lblStatus setText:typeNameImage];
+    
 
-    /*
-     
-     
+    typeNameImage =  [post.estado_follow isEqualToNumber:[NSNumber numberWithInt:0]] ? @"follow.png" : @"unfollow.png";
+    [cell.imgStatusFollow setImage:[UIImage imageNamed:typeNameImage]];
     
-    [cell.lblDate setText:[NSString stringWithFormat:@"Fecha: %@",[dateFormat stringFromDate:event.fecha_aux]]];
-    [cell.lblHour setText:[NSString stringWithFormat:@"Hora: %@",event.hora]];
-    [cell.lblAmount setText:[NSString stringWithFormat:@"Costo: %@",event.costo]];
+    typeNameImage =  [post.estado_follow isEqualToNumber:[NSNumber numberWithInt:0]] ? @"Seguir" : @"Dejar de seguir";
+    [cell.lblStatusFollow setText:typeNameImage];
     
-       */
-    
-    
-    //[cell.layer setCornerRadius:35.0f];
-    
-    [cell updateConstraintsIfNeeded];
+    [cell.lblQuantityComments setText:[NSString stringWithFormat:@"%@",post.cantidad_comentarios]];
     
     return cell;
 }

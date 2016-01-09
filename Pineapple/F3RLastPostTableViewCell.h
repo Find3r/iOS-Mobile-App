@@ -14,11 +14,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgPost;
 @property (weak, nonatomic) IBOutlet UILabel *lblPostName;
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;
-@property (weak, nonatomic) IBOutlet UILabel *lblDescription;
 @property (weak, nonatomic) IBOutlet UILabel *lblCategory;
 @property (weak, nonatomic) IBOutlet UILabel *lblStatus;
 @property (weak, nonatomic) IBOutlet UILabel *lblStatusFollow;
-@property (weak, nonatomic) IBOutlet UIImageView *imgCategory;
+@property (weak, nonatomic) IBOutlet UILabel *lblQuantityComments;
+@property (weak, nonatomic) IBOutlet UIImageView *imgType;
 @property (weak, nonatomic) IBOutlet UIImageView *imgStatus;
 @property (weak, nonatomic) IBOutlet UIImageView *imgStatusFollow;
 
