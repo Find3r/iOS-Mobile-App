@@ -39,6 +39,8 @@
 		78B0D2841C375CE4001CB717 /* F3RLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2831C375CE4001CB717 /* F3RLoginViewController.m */; };
 		78B3C8221C432EC2006577AB /* F3RCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C8211C432EC2006577AB /* F3RCommentTableViewCell.m */; };
 		78B3C8281C4331AC006577AB /* F3RCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C8271C4331AC006577AB /* F3RCommentsViewController.m */; };
+		78B3C82C1C43602A006577AB /* F3RAreaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C82B1C43602A006577AB /* F3RAreaCollectionViewCell.m */; };
+		78B3C82F1C436200006577AB /* F3RAreasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C82E1C436200006577AB /* F3RAreasViewController.m */; };
 		78CDFC611C3EDA3F00D7C6BE /* options.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CDFC601C3EDA3F00D7C6BE /* options.png */; };
 		78CDFC631C3EDB1900D7C6BE /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CDFC621C3EDB1900D7C6BE /* calendar.png */; };
 		78D1220B1C417FFB003F3E01 /* F3RPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D1220A1C417FFB003F3E01 /* F3RPostDetailViewController.m */; };
@@ -118,6 +120,10 @@
 		78B3C8211C432EC2006577AB /* F3RCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RCommentTableViewCell.m; sourceTree = "<group>"; };
 		78B3C8261C4331AC006577AB /* F3RCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RCommentsViewController.h; sourceTree = "<group>"; };
 		78B3C8271C4331AC006577AB /* F3RCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RCommentsViewController.m; sourceTree = "<group>"; };
+		78B3C82A1C43602A006577AB /* F3RAreaCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RAreaCollectionViewCell.h; sourceTree = "<group>"; };
+		78B3C82B1C43602A006577AB /* F3RAreaCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RAreaCollectionViewCell.m; sourceTree = "<group>"; };
+		78B3C82D1C436200006577AB /* F3RAreasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RAreasViewController.h; sourceTree = "<group>"; };
+		78B3C82E1C436200006577AB /* F3RAreasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RAreasViewController.m; sourceTree = "<group>"; };
 		78CDFC601C3EDA3F00D7C6BE /* options.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = options.png; sourceTree = "<group>"; };
 		78CDFC621C3EDB1900D7C6BE /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
 		78D122091C417FFB003F3E01 /* F3RPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RPostDetailViewController.h; sourceTree = "<group>"; };
@@ -186,7 +192,7 @@
 		78B0D1FD1C373A5C001CB717 /* Pineapple */ = {
 			isa = PBXGroup;
 			children = (
-				78B0D27B1C375B5F001CB717 /* TableVIewCell */,
+				78B3C8291C435FDE006577AB /* ViewCell */,
 				78B0D2691C375A62001CB717 /* img */,
 				78B0D2661C374B8F001CB717 /* Framework */,
 				78B0D2621C3748C6001CB717 /* Controller */,
@@ -268,6 +274,8 @@
 				78D1220A1C417FFB003F3E01 /* F3RPostDetailViewController.m */,
 				78B3C8261C4331AC006577AB /* F3RCommentsViewController.h */,
 				78B3C8271C4331AC006577AB /* F3RCommentsViewController.m */,
+				78B3C82D1C436200006577AB /* F3RAreasViewController.h */,
+				78B3C82E1C436200006577AB /* F3RAreasViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -296,15 +304,17 @@
 			name = img;
 			sourceTree = "<group>";
 		};
-		78B0D27B1C375B5F001CB717 /* TableVIewCell */ = {
+		78B3C8291C435FDE006577AB /* ViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				78B0D27C1C375B8C001CB717 /* F3RLastPostTableViewCell.h */,
 				78B0D27D1C375B8C001CB717 /* F3RLastPostTableViewCell.m */,
 				78B3C8201C432EC2006577AB /* F3RCommentTableViewCell.h */,
 				78B3C8211C432EC2006577AB /* F3RCommentTableViewCell.m */,
+				78B3C82A1C43602A006577AB /* F3RAreaCollectionViewCell.h */,
+				78B3C82B1C43602A006577AB /* F3RAreaCollectionViewCell.m */,
 			);
-			name = TableVIewCell;
+			name = ViewCell;
 			sourceTree = "<group>";
 		};
 		89608DE0A97147D94D1AA518 /* Frameworks */ = {
@@ -506,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78B0D2491C3742BC001CB717 /* F3RPost.m in Sources */,
+				78B3C82F1C436200006577AB /* F3RAreasViewController.m in Sources */,
 				78D1220B1C417FFB003F3E01 /* F3RPostDetailViewController.m in Sources */,
 				78B0D24F1C37431A001CB717 /* F3RComment.m in Sources */,
 				78B0D2811C375CC3001CB717 /* F3RLastPostViewController.m in Sources */,
@@ -514,6 +525,7 @@
 				78B0D2551C37436F001CB717 /* F3RCustomComment.m in Sources */,
 				78B3C8281C4331AC006577AB /* F3RCommentsViewController.m in Sources */,
 				78B0D2841C375CE4001CB717 /* F3RLoginViewController.m in Sources */,
+				78B3C82C1C43602A006577AB /* F3RAreaCollectionViewCell.m in Sources */,
 				78B0D24C1C3742E7001CB717 /* F3RCustomPost.m in Sources */,
 				78B0D2091C373A5C001CB717 /* SecondViewController.m in Sources */,
 				78B0D25E1C374454001CB717 /* F3RUser.m in Sources */,
