@@ -5,6 +5,7 @@
 
 target 'Pineapple' do
 pod 'SDWebImage', '~> 3.7'
+pod 'SSKeychain'
 end
 
 target 'PineappleTests' do

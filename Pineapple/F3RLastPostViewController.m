@@ -14,7 +14,7 @@
 #import "F3RFacebookUser.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "F3RPostDetailViewController.h"
-
+#import "F3RCommentsViewController.h"
 
 @interface F3RLastPostViewController ()
 {
@@ -244,12 +244,23 @@
 
 - (void)updateStatusFollowPostGestureCaptured:(UITapGestureRecognizer*)gesture{
     
-    NSLog(@"Click Email");
+    NSLog(@"Click follow");
 }
 
 - (void)showCommentsGestureCaptured:(UITapGestureRecognizer*)gesture{
+        NSLog(@"Click comments");
+    // se instancia el view controller
+    F3RCommentsViewController * view = [self.storyboard instantiateViewControllerWithIdentifier:@"comments"];
     
-    NSLog(@"Click Location");
+    
+    // obtenemos el objeto de la posición seleccionada
+    F3RCustomPost  *post = [collection objectAtIndex:gesture.view.tag];
+    
+    // pasamos el objeto a la vista de detalle
+    view.post = post;
+    
+    // se redirigue a la vista de detalle del post
+    [self.navigationController pushViewController:view animated:YES];
 }
 
 

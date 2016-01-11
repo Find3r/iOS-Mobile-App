@@ -37,6 +37,8 @@
 		78B0D27E1C375B8C001CB717 /* F3RLastPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D27D1C375B8C001CB717 /* F3RLastPostTableViewCell.m */; };
 		78B0D2811C375CC3001CB717 /* F3RLastPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2801C375CC3001CB717 /* F3RLastPostViewController.m */; };
 		78B0D2841C375CE4001CB717 /* F3RLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2831C375CE4001CB717 /* F3RLoginViewController.m */; };
+		78B3C8221C432EC2006577AB /* F3RCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C8211C432EC2006577AB /* F3RCommentTableViewCell.m */; };
+		78B3C8281C4331AC006577AB /* F3RCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C8271C4331AC006577AB /* F3RCommentsViewController.m */; };
 		78CDFC611C3EDA3F00D7C6BE /* options.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CDFC601C3EDA3F00D7C6BE /* options.png */; };
 		78CDFC631C3EDB1900D7C6BE /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CDFC621C3EDB1900D7C6BE /* calendar.png */; };
 		78D1220B1C417FFB003F3E01 /* F3RPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D1220A1C417FFB003F3E01 /* F3RPostDetailViewController.m */; };
@@ -112,6 +114,10 @@
 		78B0D2801C375CC3001CB717 /* F3RLastPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RLastPostViewController.m; sourceTree = "<group>"; };
 		78B0D2821C375CE4001CB717 /* F3RLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RLoginViewController.h; sourceTree = "<group>"; };
 		78B0D2831C375CE4001CB717 /* F3RLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RLoginViewController.m; sourceTree = "<group>"; };
+		78B3C8201C432EC2006577AB /* F3RCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RCommentTableViewCell.h; sourceTree = "<group>"; };
+		78B3C8211C432EC2006577AB /* F3RCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RCommentTableViewCell.m; sourceTree = "<group>"; };
+		78B3C8261C4331AC006577AB /* F3RCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RCommentsViewController.h; sourceTree = "<group>"; };
+		78B3C8271C4331AC006577AB /* F3RCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RCommentsViewController.m; sourceTree = "<group>"; };
 		78CDFC601C3EDA3F00D7C6BE /* options.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = options.png; sourceTree = "<group>"; };
 		78CDFC621C3EDB1900D7C6BE /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
 		78D122091C417FFB003F3E01 /* F3RPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RPostDetailViewController.h; sourceTree = "<group>"; };
@@ -260,6 +266,8 @@
 				78B0D2801C375CC3001CB717 /* F3RLastPostViewController.m */,
 				78D122091C417FFB003F3E01 /* F3RPostDetailViewController.h */,
 				78D1220A1C417FFB003F3E01 /* F3RPostDetailViewController.m */,
+				78B3C8261C4331AC006577AB /* F3RCommentsViewController.h */,
+				78B3C8271C4331AC006577AB /* F3RCommentsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -293,6 +301,8 @@
 			children = (
 				78B0D27C1C375B8C001CB717 /* F3RLastPostTableViewCell.h */,
 				78B0D27D1C375B8C001CB717 /* F3RLastPostTableViewCell.m */,
+				78B3C8201C432EC2006577AB /* F3RCommentTableViewCell.h */,
+				78B3C8211C432EC2006577AB /* F3RCommentTableViewCell.m */,
 			);
 			name = TableVIewCell;
 			sourceTree = "<group>";
@@ -500,7 +510,9 @@
 				78B0D24F1C37431A001CB717 /* F3RComment.m in Sources */,
 				78B0D2811C375CC3001CB717 /* F3RLastPostViewController.m in Sources */,
 				78B0D25B1C37441F001CB717 /* F3RReport.m in Sources */,
+				78B3C8221C432EC2006577AB /* F3RCommentTableViewCell.m in Sources */,
 				78B0D2551C37436F001CB717 /* F3RCustomComment.m in Sources */,
+				78B3C8281C4331AC006577AB /* F3RCommentsViewController.m in Sources */,
 				78B0D2841C375CE4001CB717 /* F3RLoginViewController.m in Sources */,
 				78B0D24C1C3742E7001CB717 /* F3RCustomPost.m in Sources */,
 				78B0D2091C373A5C001CB717 /* SecondViewController.m in Sources */,
