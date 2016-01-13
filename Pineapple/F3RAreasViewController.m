@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+ 
     
     [self.collectionView setDataSource:self];
     
@@ -36,6 +36,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 - (void) loadData
 {
     collection = [[NSMutableArray alloc] init];
@@ -98,16 +101,17 @@
     
 }
 
+
+
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return collection.count;
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 1;
-}
+
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -116,7 +120,7 @@
     
     F3RAreaCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
-    long row = [indexPath section];
+    long row = [indexPath row];
     
     
     F3RCategory  *category = [collection objectAtIndex:row];
@@ -130,5 +134,9 @@
     return cell;
 
 }
+
+#pragma mark – UICollectionViewDelegateFlowLayout
+
+
 
 @end

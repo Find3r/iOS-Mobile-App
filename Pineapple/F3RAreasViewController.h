@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface F3RAreasViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
-
+@interface F3RAreasViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
