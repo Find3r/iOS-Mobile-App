@@ -77,6 +77,17 @@
          {
              if(error) { // error is nil if no error occured
                  NSLog(@"ERROR %@", error);
+                 
+                 UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                                message:@"Error al conectar a internet, intente de nuevo"
+                                                                         preferredStyle:UIAlertControllerStyleAlert];
+                 
+                 UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                       handler:^(UIAlertAction * action) {}];
+                 
+                 [alert addAction:defaultAction];
+                 [self presentViewController:alert animated:YES completion:nil];
+                 
              }
              else
              {

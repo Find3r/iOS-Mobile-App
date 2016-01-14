@@ -13,6 +13,7 @@
 #import "F3RNotification.h"
 #import "F3RFacebookUser.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "F3RCommentsViewController.h"
 
 @implementation F3RNotificationsViewController
 {
@@ -129,6 +130,26 @@
     [cell.lblDescription setText:notification.descripcion];
     
     return cell;
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"Click commentsFromNotification");
+    
+    
+     if([[segue identifier] isEqualToString:@"commentsFromNotification"])
+     {
+         F3RCommentsViewController * view = [segue destinationViewController];
+     
+         NSIndexPath * myIndexPath = [self.tableView indexPathForSelectedRow];
+     
+         long row = [myIndexPath section];
+     
+         F3RNotification  *notification = [collection objectAtIndex:row];
+     
+         view.idPost = notification.idnoticia;
+     }
+    
 }
 
 @end

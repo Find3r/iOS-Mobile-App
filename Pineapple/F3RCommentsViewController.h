@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "F3RCustomPost.h"
 
 @interface F3RCommentsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> 
 
-@property (weak, nonatomic) F3RCustomPost *post;
+@property (weak, nonatomic) NSString *idPost;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *errorView;
 

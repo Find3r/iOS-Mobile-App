@@ -257,7 +257,7 @@
     F3RCustomPost  *post = [collection objectAtIndex:gesture.view.tag];
     
     // pasamos el objeto a la vista de detalle
-    view.post = post;
+    view.idPost = post.id;
     
     // se redirigue a la vista de detalle del post
     [self.navigationController pushViewController:view animated:YES];

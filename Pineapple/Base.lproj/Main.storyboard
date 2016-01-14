@@ -379,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1qT-gQ-dC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3247" y="350"/>
+            <point key="canvasLocation" x="719" y="772"/>
         </scene>
         <!--Comments View Controller-->
         <scene sceneID="9tn-dm-pIS">
@@ -393,11 +393,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPF-xN-gv9">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GPF-xN-gv9">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H8t-cv-rq5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H8t-cv-rq5">
                                 <rect key="frame" x="0.0" y="20" width="600" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -476,7 +476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2D-6U-a3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3244" y="-422"/>
+            <point key="canvasLocation" x="3674" y="-394"/>
         </scene>
         <!--Post Detail View Controller-->
         <scene sceneID="VVL-98-Jyt">
@@ -752,6 +752,7 @@
                                         <connections>
                                             <outlet property="imgLogo" destination="drX-bL-KW4" id="RRQ-Sp-UES"/>
                                             <outlet property="lblDescription" destination="DQV-yo-Lot" id="bi9-a0-Ns4"/>
+                                            <segue destination="bYK-Zw-qzd" kind="show" identifier="commentsFromNotification" id="TRp-Hq-7H9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -773,7 +774,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2c-RS-PAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="772"/>
+            <point key="canvasLocation" x="2988" y="300"/>
         </scene>
         <!--Reciente-->
         <scene sceneID="Qsf-Uf-bud">
@@ -811,7 +812,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHw-fb-exF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2435" y="350"/>
+            <point key="canvasLocation" x="-45" y="762"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="BNr-2N-C5h">
@@ -830,7 +831,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKa-sR-d5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="701" y="772"/>
+            <point key="canvasLocation" x="2257" y="404"/>
         </scene>
     </scenes>
     <resources>
@@ -844,5 +845,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0W5-mj-2df"/>
+        <segue reference="TRp-Hq-7H9"/>
     </inferredMetricsTieBreakers>
 </document>

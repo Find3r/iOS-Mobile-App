@@ -48,7 +48,7 @@
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
-    NSDictionary *parameters = @{ @"idnew": _post.id };
+    NSDictionary *parameters = @{ @"idnew": _idPost };
     
     [client invokeAPI:@"comments_new_aux"
                  body:nil
