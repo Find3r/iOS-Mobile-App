@@ -43,8 +43,13 @@
 		78B3C82F1C436200006577AB /* F3RAreasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B3C82E1C436200006577AB /* F3RAreasViewController.m */; };
 		78BB83671C45EB5F009C8045 /* F3RNotificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BB83661C45EB5F009C8045 /* F3RNotificationTableViewCell.m */; };
 		78BB836A1C45F0D5009C8045 /* F3RNotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BB83691C45F0D5009C8045 /* F3RNotificationsViewController.m */; };
+		78C5C09C1C49C46C00971168 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78C5C09B1C49C46C00971168 /* Default-568h@2x.png */; };
+		78C5C09F1C49C4C300971168 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78C5C09D1C49C4C300971168 /* background@2x.png */; };
+		78C5C0A01C49C4C300971168 /* background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78C5C09E1C49C4C300971168 /* background@3x.png */; };
+		78CA57651C480E7000511BBD /* F3RMyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CA57641C480E7000511BBD /* F3RMyProfileViewController.m */; };
 		78CDFC611C3EDA3F00D7C6BE /* options.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CDFC601C3EDA3F00D7C6BE /* options.png */; };
 		78CDFC631C3EDB1900D7C6BE /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 78CDFC621C3EDB1900D7C6BE /* calendar.png */; };
+		78CE85051C496BE00029DBBC /* F3RCoolNavi.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CE85041C496BE00029DBBC /* F3RCoolNavi.m */; };
 		78D1220B1C417FFB003F3E01 /* F3RPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D1220A1C417FFB003F3E01 /* F3RPostDetailViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -130,8 +135,15 @@
 		78BB83661C45EB5F009C8045 /* F3RNotificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RNotificationTableViewCell.m; sourceTree = "<group>"; };
 		78BB83681C45F0D5009C8045 /* F3RNotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RNotificationsViewController.h; sourceTree = "<group>"; };
 		78BB83691C45F0D5009C8045 /* F3RNotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RNotificationsViewController.m; sourceTree = "<group>"; };
+		78C5C09B1C49C46C00971168 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		78C5C09D1C49C4C300971168 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		78C5C09E1C49C4C300971168 /* background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@3x.png"; sourceTree = "<group>"; };
+		78CA57631C480E7000511BBD /* F3RMyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RMyProfileViewController.h; sourceTree = "<group>"; };
+		78CA57641C480E7000511BBD /* F3RMyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RMyProfileViewController.m; sourceTree = "<group>"; };
 		78CDFC601C3EDA3F00D7C6BE /* options.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = options.png; sourceTree = "<group>"; };
 		78CDFC621C3EDB1900D7C6BE /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		78CE85031C496BE00029DBBC /* F3RCoolNavi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RCoolNavi.h; sourceTree = "<group>"; };
+		78CE85041C496BE00029DBBC /* F3RCoolNavi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RCoolNavi.m; sourceTree = "<group>"; };
 		78D122091C417FFB003F3E01 /* F3RPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RPostDetailViewController.h; sourceTree = "<group>"; };
 		78D1220A1C417FFB003F3E01 /* F3RPostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RPostDetailViewController.m; sourceTree = "<group>"; };
 		F8D1B7554A7A1593D9C6B747 /* libPods-Pineapple.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pineapple.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +210,7 @@
 		78B0D1FD1C373A5C001CB717 /* Pineapple */ = {
 			isa = PBXGroup;
 			children = (
+				78CE85021C496BB30029DBBC /* Helper */,
 				78B3C8291C435FDE006577AB /* ViewCell */,
 				78B0D2691C375A62001CB717 /* img */,
 				78B0D2661C374B8F001CB717 /* Framework */,
@@ -284,6 +297,8 @@
 				78B3C82E1C436200006577AB /* F3RAreasViewController.m */,
 				78BB83681C45F0D5009C8045 /* F3RNotificationsViewController.h */,
 				78BB83691C45F0D5009C8045 /* F3RNotificationsViewController.m */,
+				78CA57631C480E7000511BBD /* F3RMyProfileViewController.h */,
+				78CA57641C480E7000511BBD /* F3RMyProfileViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -299,6 +314,7 @@
 		78B0D2691C375A62001CB717 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				78C5C09B1C49C46C00971168 /* Default-568h@2x.png */,
 				78CDFC621C3EDB1900D7C6BE /* calendar.png */,
 				78CDFC601C3EDA3F00D7C6BE /* options.png */,
 				78B0D2761C375A80001CB717 /* comment.png */,
@@ -306,6 +322,8 @@
 				78B0D26B1C375A70001CB717 /* found.png */,
 				78B0D26C1C375A70001CB717 /* lost.png */,
 				78B0D26D1C375A70001CB717 /* solved.png */,
+				78C5C09D1C49C4C300971168 /* background@2x.png */,
+				78C5C09E1C49C4C300971168 /* background@3x.png */,
 				78B0D26E1C375A70001CB717 /* unfollow.png */,
 				78B0D26F1C375A70001CB717 /* unsolved.png */,
 			);
@@ -325,6 +343,15 @@
 				78BB83661C45EB5F009C8045 /* F3RNotificationTableViewCell.m */,
 			);
 			name = ViewCell;
+			sourceTree = "<group>";
+		};
+		78CE85021C496BB30029DBBC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				78CE85031C496BE00029DBBC /* F3RCoolNavi.h */,
+				78CE85041C496BE00029DBBC /* F3RCoolNavi.m */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 		89608DE0A97147D94D1AA518 /* Frameworks */ = {
@@ -450,8 +477,11 @@
 				78B0D20E1C373A5C001CB717 /* Assets.xcassets in Resources */,
 				78B0D2741C375A70001CB717 /* unfollow.png in Resources */,
 				78B0D2771C375A80001CB717 /* comment.png in Resources */,
+				78C5C09C1C49C46C00971168 /* Default-568h@2x.png in Resources */,
+				78C5C09F1C49C4C300971168 /* background@2x.png in Resources */,
 				78B0D20C1C373A5C001CB717 /* Main.storyboard in Resources */,
 				78CDFC611C3EDA3F00D7C6BE /* options.png in Resources */,
+				78C5C0A01C49C4C300971168 /* background@3x.png in Resources */,
 				78B0D2721C375A70001CB717 /* lost.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78CA57651C480E7000511BBD /* F3RMyProfileViewController.m in Sources */,
 				78B0D2491C3742BC001CB717 /* F3RPost.m in Sources */,
 				78B3C82F1C436200006577AB /* F3RAreasViewController.m in Sources */,
 				78D1220B1C417FFB003F3E01 /* F3RPostDetailViewController.m in Sources */,
@@ -534,6 +565,7 @@
 				78B3C8221C432EC2006577AB /* F3RCommentTableViewCell.m in Sources */,
 				78B0D2551C37436F001CB717 /* F3RCustomComment.m in Sources */,
 				78B3C8281C4331AC006577AB /* F3RCommentsViewController.m in Sources */,
+				78CE85051C496BE00029DBBC /* F3RCoolNavi.m in Sources */,
 				78B0D2841C375CE4001CB717 /* F3RLoginViewController.m in Sources */,
 				78B3C82C1C43602A006577AB /* F3RAreaCollectionViewCell.m in Sources */,
 				78B0D24C1C3742E7001CB717 /* F3RCustomPost.m in Sources */,

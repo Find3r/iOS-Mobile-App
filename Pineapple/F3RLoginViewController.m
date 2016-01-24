@@ -98,7 +98,7 @@
                      }
                  }
                  
-                 NSLog(@"%@",F3RFacebookUser.user.name);
+                 //NSLog(@"%@",F3RFacebookUser.user.name);
                  
                  // salvamos los datos
                  [self saveAuthInfo];
