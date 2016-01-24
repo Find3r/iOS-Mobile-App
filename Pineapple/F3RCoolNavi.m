@@ -38,18 +38,18 @@
         _backImageView.image = [UIImage imageNamed:backImageName];
         _backImageView.contentMode = UIViewContentModeScaleAspectFill;
         
-        _headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width*0.5-70*0.5, 0.21*frame.size.height, 70, 70)];
+        _headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width*0.5-70*0.5, 0.25*frame.size.height, 70, 70)];
         [_headerImageView sd_setImageWithURL:[NSURL URLWithString:headerImageURL]];
         [_headerImageView.layer setMasksToBounds:YES];
         _headerImageView.layer.cornerRadius = _headerImageView.frame.size.width/2.0f;
         _headerImageView.userInteractionEnabled = YES;
         
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0.2*frame.size.height, frame.size.width , frame.size.height*0.2)];
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0.4*frame.size.height, frame.size.width , frame.size.height*0.2)];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.font = [UIFont systemFontOfSize:14];
         _titleLabel.text = title;
         
-        _subTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0.3*frame.size.height, frame.size.width, frame.size.height*0.2)];
+        _subTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0.6*frame.size.height, frame.size.width, frame.size.height*0.2)];
         _subTitleLabel.textAlignment = NSTextAlignmentCenter;
         _subTitleLabel.font = [UIFont systemFontOfSize:14];
         _subTitleLabel.text = subTitle;
@@ -59,8 +59,9 @@
         NSArray *array = [[NSArray alloc] initWithObjects:@"Mis publicaciones",@"Seguimiento", nil];
         _segmentControl = [[UISegmentedControl alloc] initWithItems:array];
         
-        [_segmentControl setFrame:CGRectMake(10, 0.9*frame.size.height, frame.size.width - 10, frame.size.height*0.1)];
+        [_segmentControl setFrame:CGRectMake(10, 0.87*frame.size.height, frame.size.width - 20, frame.size.height*0.1)];
         [_segmentControl setSelectedSegmentIndex:0];
+       // [_segmentControl setLayoutMargins:UIEdgeInsetsMake(30, 30, 30, 30)];
         
         [self addSubview:_backImageView];
         [self addSubview:_headerImageView];

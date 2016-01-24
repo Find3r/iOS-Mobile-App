@@ -16,7 +16,7 @@
 #import "F3RCommentsViewController.h"
 #import "F3RCoolNavi.h"
 
-static CGFloat const kWindowHeight = 230.0f;
+static CGFloat const kWindowHeight = 235.0f;
 static NSUInteger const kCellNum = 40;
 static NSUInteger const kRowHeight = 44;
 static NSString * const kCellIdentify = @"cell";
