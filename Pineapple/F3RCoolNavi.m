@@ -18,7 +18,7 @@
 @property (nonatomic, strong) UIImageView *headerImageView;
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *subTitleLabel;
-@property (nonatomic, strong) UISegmentedControl *segmentControl;
+
 @property (nonatomic, assign) CGPoint prePoint;
 
 
@@ -38,7 +38,7 @@
         _backImageView.image = [UIImage imageNamed:backImageName];
         _backImageView.contentMode = UIViewContentModeScaleAspectFill;
         
-        _headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width*0.5-70*0.5, 0.25*frame.size.height, 70, 70)];
+        _headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width*0.5-70*0.5, 0.3*frame.size.height, 70, 70)];
         [_headerImageView sd_setImageWithURL:[NSURL URLWithString:headerImageURL]];
         [_headerImageView.layer setMasksToBounds:YES];
         _headerImageView.layer.cornerRadius = _headerImageView.frame.size.width/2.0f;
@@ -62,7 +62,8 @@
         [_segmentControl setFrame:CGRectMake(10, 0.87*frame.size.height, frame.size.width - 20, frame.size.height*0.1)];
         [_segmentControl setSelectedSegmentIndex:0];
         [_segmentControl setBackgroundColor:[UIColor colorWithRed:58 green:113 blue:255 alpha:1]];
-       // [_segmentControl setLayoutMargins:UIEdgeInsetsMake(30, 30, 30, 30)];
+       
+   
         
         [self addSubview:_backImageView];
         [self addSubview:_headerImageView];

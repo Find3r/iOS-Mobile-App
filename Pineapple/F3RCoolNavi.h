@@ -11,7 +11,7 @@
 @interface F3RCoolNavi : UIView
 
 @property (nonatomic, weak) UIScrollView *scrollView;
-
+@property (nonatomic, strong) UISegmentedControl *segmentControl;
 
 // image action
 @property (nonatomic, copy) void(^imgActionBlock)();

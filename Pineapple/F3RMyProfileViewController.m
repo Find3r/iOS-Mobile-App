@@ -15,32 +15,36 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "F3RCommentsViewController.h"
 #import "F3RCoolNavi.h"
+#import "F3RLastPostTableViewCell.h"
+#import "F3RCustomPost.h"
+#import "F3RPostDetailViewController.h"
 
 static CGFloat const kWindowHeight = 235.0f;
-static NSUInteger const kCellNum = 40;
-static NSUInteger const kRowHeight = 44;
-static NSString * const kCellIdentify = @"cell";
+static NSString * const kCellIdentify = @"lastPostTableViewCell";
+static BOOL statusNavigationBar = NO;
 
 @implementation F3RMyProfileViewController
 {
     NSMutableArray *collection;
+    NSMutableArray *collectionMyPosts;
+    NSMutableArray *collectionMyFollwingPosts;
+    
+    
     NSDateFormatter *dateFormat;
     
     UITapGestureRecognizer *showDescriptionPostTap;
     UITapGestureRecognizer *updateFollowStatusPostTap;
     UITapGestureRecognizer *showCommentsPostTap;
-    
+   
     
     
 }
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.navigationController setNavigationBarHidden:YES];
-    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
-    self.tableView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
     F3RCoolNavi *headerView = [[F3RCoolNavi alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), kWindowHeight)backGroudImage:@"background" headerImageURL:@"http://d.hiphotos.baidu.com/image/pic/item/0ff41bd5ad6eddc4f263b0fc3adbb6fd52663334.jpg" title:@"妹子!" subTitle:@"个性签名, 啦啦啦!"];
     headerView.scrollView = self.tableView;
     headerView.imgActionBlock = ^(){
@@ -57,6 +61,11 @@ static NSString * const kCellIdentify = @"cell";
     [dateFormat setDateFormat:@"dd/MM/yyyy"];
     
     
+    // se establece el listener del segment control
+    [headerView.segmentControl addTarget:self action:@selector(MySegmentControlAction:) forControlEvents: UIControlEventValueChanged];
+     
+    
+    
     //[self.tableView setDataSource:self];
     
   
@@ -64,13 +73,178 @@ static NSString * const kCellIdentify = @"cell";
     //[self.activityIndicator startAnimating];
     
  
-    //[self loadData];
+    [self loadMyPosts:YES];
+    [self loadMyFollowingPosts];
 }
+
+- (void) viewDidAppear :(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"Hello");
+    
+    // se oculta navigation bar
+    //[self.navigationController setNavigationBarHidden:YES];
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void) loadMyPosts:(BOOL) reloadTableView
+{
+    collection = [[NSMutableArray alloc] init];
+    collectionMyPosts = [[NSMutableArray alloc] init];
+    
+    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
+    
+    NSDictionary *parameters = @{ @"id": F3RFacebookUser.user.id };
+    
+    [client invokeAPI:@"my_news"
+                 body:nil
+           HTTPMethod:@"GET"
+           parameters:parameters
+              headers:nil
+           completion:  ^(NSDictionary *result,
+                          NSHTTPURLResponse *response,
+                          NSError *error){
+               if(error) { // error is nil if no error occured
+                   NSLog(@"ERROR %@", error);
+               } else {
+                   
+                   for(NSDictionary *item in result)
+                   {
+                       
+                       F3RCustomPost *customPost = [[F3RCustomPost alloc] init];
+                       
+                       for (NSString *key in item) {
+                           
+                           
+                           
+                           if ([customPost respondsToSelector:NSSelectorFromString(key)]) {
+                               
+                               [customPost setValue:[item valueForKey:key] forKey:key];
+                           }
+                           
+                           
+                       }
+                       
+                       if([item objectForKey:@"estado_follow"] == [NSNull null])
+                       {
+                           customPost.estado_follow = [NSNumber numberWithInt:0];
+                       }
+                       
+                       if([item objectForKey:@"cantidad_comentarios"] == [NSNull null])
+                       {
+                           customPost.cantidad_comentarios = [NSNumber numberWithInt:0];
+                       }
+                       
+                       
+                       [collectionMyPosts addObject:customPost];
+                       
+                       
+                   }
+                   
+                   if (reloadTableView)
+                   {
+                       collection = collectionMyPosts;
+                       [self.tableView reloadData];
+                   }
+                   
+                   
+               }
+               /*
+                [self.activityIndicator stopAnimating];
+                
+                if (collection.count == 0) {
+                [self.errorView setHidden:NO];
+                }
+                else
+                {
+                [self.errorView setHidden:YES];
+                }
+                
+                */
+               
+           }];
+    
+}
+
+
+
+- (void) loadMyFollowingPosts
+{
+    collection = [[NSMutableArray alloc] init];
+    collectionMyFollwingPosts = [[NSMutableArray alloc] init];
+    
+    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
+    
+    NSDictionary *parameters = @{ @"iduser": F3RFacebookUser.user.id };
+    
+    [client invokeAPI:@"following_news"
+                 body:nil
+           HTTPMethod:@"GET"
+           parameters:parameters
+              headers:nil
+           completion:  ^(NSDictionary *result,
+                          NSHTTPURLResponse *response,
+                          NSError *error){
+               if(error) { // error is nil if no error occured
+                   NSLog(@"ERROR %@", error);
+               } else {
+                   
+                   for(NSDictionary *item in result)
+                   {
+                       
+                       F3RCustomPost *customPost = [[F3RCustomPost alloc] init];
+                       
+                       for (NSString *key in item) {
+                           
+                           if ([customPost respondsToSelector:NSSelectorFromString(key)]) {
+                               
+                               [customPost setValue:[item valueForKey:key] forKey:key];
+                           }
+                           
+                       }
+                       
+                       if([item objectForKey:@"estado_follow"] == [NSNull null])
+                       {
+                           customPost.estado_follow = [NSNumber numberWithInt:0];
+                       }
+                       
+                       if([item objectForKey:@"cantidad_comentarios"] == [NSNull null])
+                       {
+                           customPost.cantidad_comentarios = [NSNumber numberWithInt:0];
+                       }
+                       
+                       [collectionMyFollwingPosts addObject:customPost];
+                    
+                   }
+                   
+                   
+                   
+               }
+               /*
+                [self.activityIndicator stopAnimating];
+                
+                if (collection.count == 0) {
+                [self.errorView setHidden:NO];
+                }
+                else
+                {
+                [self.errorView setHidden:YES];
+                }
+                
+                */
+               
+           }];
+    
+}
+
+
 
 #pragma mark - getter and setter
 
@@ -90,67 +264,30 @@ static NSString * const kCellIdentify = @"cell";
 
 */
 
-#pragma mark - tableView Delegate and dataSource
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return kCellNum;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentify forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"test %ld",(long)indexPath.row];
-    return cell;
-    
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return kRowHeight;
-}
-
-
-
-/*
-
-- (void) loadData
+- (void)MySegmentControlAction:(UISegmentedControl *)segment
 {
-    collection = [[NSMutableArray alloc] init];
-    
-    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
-    
-    MSTable *table = [client tableWithName:@"notificacionusuario"];
-    
-    MSQuery *query = [table queryWithPredicate: [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"idusuario == %@",F3RFacebookUser.user.id]]];
-    [query orderByDescending:@"__createdAt"];
-    [query readWithCompletion:^(MSQueryResult *result, NSError *error) {
-        if(error) {
-            NSLog(@"ERROR %@", error);
-        } else {
-            for(NSDictionary *item in result.items) {
-                
-                F3RNotification *notification = [[F3RNotification alloc] init];
-                
-                for (NSString *key in item) {
-                    
-                    if ([notification respondsToSelector:NSSelectorFromString(key)]) {
-                        
-                        [notification setValue:[item valueForKey:key] forKey:key];
-                    }
-                    
-                }
-                
-                [collection addObject:notification];
-                
-            }
-            [self.tableView reloadData];
-        }
-    }];
+    // se verifica cual es el item seleccionado
+    switch (segment.selectedSegmentIndex)
+    {
+        // mis noticias
+        case 0:
+            collection = collectionMyPosts;
+            break;
+            
+        case 1:
+            collection = collectionMyFollwingPosts;
+            break;
+        
+        default:
+            break;
+    }
     
     
+    [self.tableView reloadData];
+
 }
 
-#pragma mark - Table view data source
+#pragma mark - tableView Delegate and dataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -183,90 +320,120 @@ static NSString * const kCellIdentify = @"cell";
 }
 
 
+
+
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * cellIdentifier = @"testTableViewCell";
+    static NSString * cellIdentifier = @"lastPostTableViewCell";
     
-    F3RNotificationTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    F3RLastPostTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     if (cell == nil) {
-        cell = [[F3RNotificationTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[F3RLastPostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     long row = [indexPath section];
     
+    F3RCustomPost  *post = [collection objectAtIndex:row];
     
-    F3RNotification  *notification = [collection objectAtIndex:row];
+    [cell.imgPost setTag:row];
+    [cell.imgStatusFollow setTag:row];
+    [cell.imgComments setTag:row];
     
-    [cell.lblDescription setText:notification.descripcion];
+    // se verifica si ya hay un reconocedor
+    if (cell.imgPost.gestureRecognizers.count == 0)
+    {
+        showDescriptionPostTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showDescriptionPostGestureCaptured:)];
+        updateFollowStatusPostTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(updateStatusFollowPostGestureCaptured:)];
+        showCommentsPostTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showCommentsGestureCaptured:)];
+        
+        
+        [cell.imgPost addGestureRecognizer:showDescriptionPostTap];
+        [cell.imgStatusFollow addGestureRecognizer:updateFollowStatusPostTap];
+        [cell.imgComments addGestureRecognizer:showCommentsPostTap];
+        
+    }
     
-    _cellHeader = cell;
+    [cell.lblUserName setText:post.nombre_usuario];
+    [cell.lblPostName setText:post.nombre];
+    [cell.lblDate setText:[NSString stringWithFormat:@"Fecha: %@",[dateFormat stringFromDate:post.fechadesaparicion]]];
+    
+    [cell.imgPost sd_setImageWithURL:[NSURL URLWithString:post.urlimagen]
+                    placeholderImage:[UIImage imageNamed:@"picture.png"]];
+    
+    // imagen perfil de usuario
+    [cell.imgUser sd_setImageWithURL:[NSURL URLWithString:post.urlimagen_perfil_usuario]
+                    placeholderImage:[UIImage imageNamed:@"picture.png"]];
+    
+    // se establecen los bordes redondos
+    [cell.imgUser.layer setCornerRadius: cell.imgUser.frame.size.width / 2];
+    [cell.imgUser setClipsToBounds:YES];
+    
+    // se verifica cual imagen se debe desplegar, se utiliza un operador ternario
+    NSString * typeNameImage = [post.idestado isEqualToString:@"0"] ? @"found.png" : @"lost.png";
+    [cell.imgType setImage:[UIImage imageNamed:typeNameImage]];
+    
+    typeNameImage = [post.idestado isEqualToString:@"0"] ? @"Encontrad@" : @"Perdid@";
+    [cell.lblCategory setText:typeNameImage];
+    
+    typeNameImage = [post.solved isEqualToNumber:[NSNumber numberWithInt:0]] ? @"unsolved.png" : @"solved.png";
+    [cell.imgStatus setImage:[UIImage imageNamed:typeNameImage]];
+    
+    typeNameImage = [post.solved isEqualToNumber:[NSNumber numberWithInt:0]] ? @"Pendiente" : @"Resuelto";
+    [cell.lblStatus setText:typeNameImage];
+    
+    
+    typeNameImage =  [post.estado_follow isEqualToNumber:[NSNumber numberWithInt:0]] ? @"follow.png" : @"unfollow.png";
+    [cell.imgStatusFollow setImage:[UIImage imageNamed:typeNameImage]];
+    
+    typeNameImage =  [post.estado_follow isEqualToNumber:[NSNumber numberWithInt:0]] ? @"Seguir" : @"Dejar de seguir";
+    [cell.lblStatusFollow setText:typeNameImage];
+    
+    [cell.lblQuantityComments setText:[NSString stringWithFormat:@"%@",post.cantidad_comentarios]];
     
     return cell;
 }
 
-- (void)scrollToRowAtIndexPath:(NSIndexPath *)indexPath
-              atScrollPosition:(UITableViewScrollPosition)scrollPosition
-                      animated:(BOOL)animated
-{
-    NSLog(@"scrollToRowAtIndexPath");
+- (void)showDescriptionPostGestureCaptured:(UITapGestureRecognizer*)gesture{
+    
+    // se instancia el view controller
+    F3RPostDetailViewController * view = [self.storyboard instantiateViewControllerWithIdentifier:@"post_info"];
+    
+    
+    // obtenemos el objeto de la posición seleccionada
+    F3RCustomPost  *post = [collection objectAtIndex:gesture.view.tag];
+    
+    // pasamos el objeto a la vista de detalle
+    view.post = post;
+    
+    [self.navigationController setNavigationBarHidden:NO];
+    
+    // se redirigue a la vista de detalle del post
+    [self.navigationController pushViewController:view animated:YES];
     
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    // Add some logic here to determine the section header. For example, use
-    // indexPathsForVisibleRows to get the visible index paths, from which you
-    // should be able to get the table view row that corresponds to the current
-    // section header. How this works will be implementation dependent.
-    //
-    // If the current section header has changed since the pervious scroll request
-    // (because a new one should now be at the top of the screen) then you should
-    // update the contents.
+- (void)updateStatusFollowPostGestureCaptured:(UITapGestureRecognizer*)gesture{
     
-    NSIndexPath *firstVisibleIndexPath = [[self.tableView indexPathsForVisibleRows] objectAtIndex:0];
-    NSLog(@"first visible cell's section: %li", (long)firstVisibleIndexPath.section);
-    F3RNotificationTableViewCell *headerCell = [self.tableView cellForRowAtIndexPath:firstVisibleIndexPath];
-    
-    // If it exists then it's on screen. Hide our false header
-    
-    if (headerCell)
-        self.cellHeader.hidden = true;
-    
-    // If it doesn't exist (not on screen) or if it's partially scrolled off the top,
-    // position our false header at the top of the screen
-    
-    if (!headerCell || headerCell.frame.origin.y < self.tableView.contentOffset.y )
-    {
-        self.cellHeader.hidden = NO;
-        self.cellHeader.frame = CGRectMake(0, self.tableView.contentOffset.y, self.cellHeader.frame.size.width, self.cellHeader.frame.size.height);
-    }
-    
-    // Make sure it's on top of all other cells
-    
-    [self.tableView bringSubviewToFront:self.cellHeader];
+    NSLog(@"Click follow");
 }
 
-
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSLog(@"Click commentsFromNotification");
+- (void)showCommentsGestureCaptured:(UITapGestureRecognizer*)gesture{
+    NSLog(@"Click comments");
+    // se instancia el view controller
+    F3RCommentsViewController * view = [self.storyboard instantiateViewControllerWithIdentifier:@"comments"];
     
     
-    if([[segue identifier] isEqualToString:@"commentsFromNotification"])
-    {
-        F3RCommentsViewController * view = [segue destinationViewController];
-        
-        NSIndexPath * myIndexPath = [self.tableView indexPathForSelectedRow];
-        
-        long row = [myIndexPath section];
-        
-        F3RNotification  *notification = [collection objectAtIndex:row];
-        
-        view.idPost = notification.idnoticia;
-    }
+    // obtenemos el objeto de la posición seleccionada
+    F3RCustomPost  *post = [collection objectAtIndex:gesture.view.tag];
     
+    // pasamos el objeto a la vista de detalle
+    view.idPost = post.id;
+    
+    [self.navigationController setNavigationBarHidden:NO];
+    
+    // se redirigue a la vista de detalle del post
+    [self.navigationController pushViewController:view animated:YES];
 }
- */
 
 @end
