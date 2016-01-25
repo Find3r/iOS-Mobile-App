@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		69041EE9AF1F0CB728347B4A /* libPods-Pineapple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D1B7554A7A1593D9C6B747 /* libPods-Pineapple.a */; };
+		78A4ACBC1C56CE6200DAB29E /* F3RPostCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A4ACBB1C56CE6200DAB29E /* F3RPostCategoryViewController.m */; };
 		78B0D2001C373A5C001CB717 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D1FF1C373A5C001CB717 /* main.m */; };
 		78B0D2031C373A5C001CB717 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2021C373A5C001CB717 /* AppDelegate.m */; };
 		78B0D2061C373A5C001CB717 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2051C373A5C001CB717 /* FirstViewController.m */; };
@@ -73,6 +74,8 @@
 /* Begin PBXFileReference section */
 		0395586F38059B9CFF8CE923 /* Pods-Pineapple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pineapple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pineapple/Pods-Pineapple.debug.xcconfig"; sourceTree = "<group>"; };
 		7393854367B12A970A886F78 /* Pods-Pineapple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pineapple.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pineapple/Pods-Pineapple.release.xcconfig"; sourceTree = "<group>"; };
+		78A4ACBA1C56CE6200DAB29E /* F3RPostCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RPostCategoryViewController.h; sourceTree = "<group>"; };
+		78A4ACBB1C56CE6200DAB29E /* F3RPostCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RPostCategoryViewController.m; sourceTree = "<group>"; };
 		78B0D1FB1C373A5C001CB717 /* Pineapple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pineapple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78B0D1FF1C373A5C001CB717 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		78B0D2011C373A5C001CB717 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -299,6 +302,8 @@
 				78BB83691C45F0D5009C8045 /* F3RNotificationsViewController.m */,
 				78CA57631C480E7000511BBD /* F3RMyProfileViewController.h */,
 				78CA57641C480E7000511BBD /* F3RMyProfileViewController.m */,
+				78A4ACBA1C56CE6200DAB29E /* F3RPostCategoryViewController.h */,
+				78A4ACBB1C56CE6200DAB29E /* F3RPostCategoryViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -571,6 +576,7 @@
 				78B0D24C1C3742E7001CB717 /* F3RCustomPost.m in Sources */,
 				78B0D2091C373A5C001CB717 /* SecondViewController.m in Sources */,
 				78BB836A1C45F0D5009C8045 /* F3RNotificationsViewController.m in Sources */,
+				78A4ACBC1C56CE6200DAB29E /* F3RPostCategoryViewController.m in Sources */,
 				78B0D25E1C374454001CB717 /* F3RUser.m in Sources */,
 				78BB83671C45EB5F009C8045 /* F3RNotificationTableViewCell.m in Sources */,
 				78B0D2031C373A5C001CB717 /* AppDelegate.m in Sources */,

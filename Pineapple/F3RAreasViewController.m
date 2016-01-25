@@ -13,6 +13,7 @@
 #import "F3RCategory.h"
 #import "F3RFacebookUser.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "F3RPostCategoryViewController.h"
 
 @implementation F3RAreasViewController
 {
@@ -136,7 +137,23 @@
 }
 
 #pragma mark – UICollectionViewDelegateFlowLayout
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
 
-
+    if([[segue identifier] isEqualToString:@"postsByCategory"])
+    {
+        F3RPostCategoryViewController * view = [segue destinationViewController];
+        
+        NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];
+        NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
+        
+        //long row = [indexPath section];
+        
+        F3RCategory  *category = [collection objectAtIndex:indexPath.row];
+        
+        view.idCategory = category.id;
+    }
+    
+}
 
 @end
