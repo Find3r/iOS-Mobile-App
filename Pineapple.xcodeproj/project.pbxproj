@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		69041EE9AF1F0CB728347B4A /* libPods-Pineapple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D1B7554A7A1593D9C6B747 /* libPods-Pineapple.a */; };
 		78A4ACBC1C56CE6200DAB29E /* F3RPostCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A4ACBB1C56CE6200DAB29E /* F3RPostCategoryViewController.m */; };
+		78A4ACBF1C56D78D00DAB29E /* F3RUserPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A4ACBE1C56D78D00DAB29E /* F3RUserPost.m */; };
 		78B0D2001C373A5C001CB717 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D1FF1C373A5C001CB717 /* main.m */; };
 		78B0D2031C373A5C001CB717 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2021C373A5C001CB717 /* AppDelegate.m */; };
 		78B0D2061C373A5C001CB717 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D2051C373A5C001CB717 /* FirstViewController.m */; };
@@ -76,6 +77,8 @@
 		7393854367B12A970A886F78 /* Pods-Pineapple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pineapple.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pineapple/Pods-Pineapple.release.xcconfig"; sourceTree = "<group>"; };
 		78A4ACBA1C56CE6200DAB29E /* F3RPostCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RPostCategoryViewController.h; sourceTree = "<group>"; };
 		78A4ACBB1C56CE6200DAB29E /* F3RPostCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RPostCategoryViewController.m; sourceTree = "<group>"; };
+		78A4ACBD1C56D78D00DAB29E /* F3RUserPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3RUserPost.h; sourceTree = "<group>"; };
+		78A4ACBE1C56D78D00DAB29E /* F3RUserPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3RUserPost.m; sourceTree = "<group>"; };
 		78B0D1FB1C373A5C001CB717 /* Pineapple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pineapple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78B0D1FF1C373A5C001CB717 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		78B0D2011C373A5C001CB717 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -281,6 +284,8 @@
 				78B0D25D1C374454001CB717 /* F3RUser.m */,
 				78B0D25F1C3744AC001CB717 /* F3RFacebookUser.h */,
 				78B0D2601C3744AC001CB717 /* F3RFacebookUser.m */,
+				78A4ACBD1C56D78D00DAB29E /* F3RUserPost.h */,
+				78A4ACBE1C56D78D00DAB29E /* F3RUserPost.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -563,6 +568,7 @@
 				78CA57651C480E7000511BBD /* F3RMyProfileViewController.m in Sources */,
 				78B0D2491C3742BC001CB717 /* F3RPost.m in Sources */,
 				78B3C82F1C436200006577AB /* F3RAreasViewController.m in Sources */,
+				78A4ACBF1C56D78D00DAB29E /* F3RUserPost.m in Sources */,
 				78D1220B1C417FFB003F3E01 /* F3RPostDetailViewController.m in Sources */,
 				78B0D24F1C37431A001CB717 /* F3RComment.m in Sources */,
 				78B0D2811C375CC3001CB717 /* F3RLastPostViewController.m in Sources */,

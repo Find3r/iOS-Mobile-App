@@ -15,6 +15,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "F3RPostDetailViewController.h"
 #import "F3RCommentsViewController.h"
+#import "F3RUserPost.h"
 
 @interface F3RLastPostViewController ()
 {
@@ -118,6 +119,23 @@
                
            }];
     
+}
+
+- (void) updatePostFollowStatus:(NSDictionary *) userPost
+{
+    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
+    MSTable *table = [client tableWithName:@"noticia_usuario"];
+    
+    [table insert:userPost completion:^(NSDictionary *result, NSError *error) {
+        // The result contains the new item that was inserted,
+        // depending on your server scripts it may have additional or modified
+        // data compared to what was passed to the server.
+        if(error) {
+            NSLog(@"ERROR %@", error);
+        } else {
+            NSLog(@"Todo Item: %@", [result objectForKey:@"id"]);
+        }
+    }];
 }
 
 #pragma mark - Table view data source
@@ -244,7 +262,25 @@
 
 - (void)updateStatusFollowPostGestureCaptured:(UITapGestureRecognizer*)gesture{
     
-    NSLog(@"Click follow");
+    // se obtiene el item seleccionado
+    F3RCustomPost  *post = [collection objectAtIndex:gesture.view.tag];
+    
+    post.estado_follow = [post.estado_follow isEqualToNumber:[NSNumber numberWithInt:0]] ? [NSNumber numberWithInt:1] : [NSNumber numberWithInt:0];
+    
+    // se crea el objeto de tipo UserPost
+    F3RUserPost * userPost = [[F3RUserPost alloc] initWithIdUser:F3RFacebookUser.user.id
+                                                          IdPost:post.id
+                                                    FollowStatus:post.estado_follow];
+    
+    // se recarga el tableview
+    [self.tableView reloadData];
+    
+   
+    // se actualiza el registro
+    NSDictionary *newItem = @{@"idusuario": F3RFacebookUser.user.id, @"idnoticia": post.id, @"estado_seguimiento" : [post.estado_follow isEqualToNumber:[NSNumber numberWithInt:0]] ? @NO : @YES};
+    
+    [self updatePostFollowStatus:newItem];
+    
 }
 
 - (void)showCommentsGestureCaptured:(UITapGestureRecognizer*)gesture{
