@@ -21,7 +21,6 @@
 
 static CGFloat const kWindowHeight = 235.0f;
 static NSString * const kCellIdentify = @"lastPostTableViewCell";
-static BOOL statusNavigationBar = NO;
 
 @implementation F3RMyProfileViewController
 {
@@ -173,6 +172,22 @@ static BOOL statusNavigationBar = NO;
     
 }
 
+- (void) updatePostFollowStatus:(NSDictionary *) userPost
+{
+    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
+    MSTable *table = [client tableWithName:@"noticia_usuario"];
+    
+    [table insert:userPost completion:^(NSDictionary *result, NSError *error) {
+        // The result contains the new item that was inserted,
+        // depending on your server scripts it may have additional or modified
+        // data compared to what was passed to the server.
+        if(error) {
+            NSLog(@"ERROR %@", error);
+        } else {
+            NSLog(@"Todo Item: %@", [result objectForKey:@"id"]);
+        }
+    }];
+}
 
 
 - (void) loadMyFollowingPosts
@@ -415,7 +430,20 @@ static BOOL statusNavigationBar = NO;
 
 - (void)updateStatusFollowPostGestureCaptured:(UITapGestureRecognizer*)gesture{
     
-    NSLog(@"Click follow");
+    // se obtiene el item seleccionado
+    F3RCustomPost  *post = [collection objectAtIndex:gesture.view.tag];
+    
+    post.estado_follow = [post.estado_follow isEqualToNumber:[NSNumber numberWithInt:0]] ? [NSNumber numberWithInt:1] : [NSNumber numberWithInt:0];
+    
+    // se recarga el tableview
+    [self.tableView reloadData];
+    
+    
+    // se actualiza el registro
+    NSDictionary *newItem = @{@"idusuario": F3RFacebookUser.user.id, @"idnoticia": post.id, @"estado_seguimiento" : [post.estado_follow isEqualToNumber:[NSNumber numberWithInt:0]] ? @NO : @YES};
+    
+    [self updatePostFollowStatus:newItem];
+    
 }
 
 - (void)showCommentsGestureCaptured:(UITapGestureRecognizer*)gesture{
