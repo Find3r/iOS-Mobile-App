@@ -18,6 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong)  IBOutlet UITableView *tableView;
 
 @end

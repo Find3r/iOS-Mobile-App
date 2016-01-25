@@ -47,6 +47,9 @@ static NSString * const kCellIdentify = @"cell";
         NSLog(@"headerImageAction");
     };
     [self.view addSubview:headerView];
+    
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
 
     
     
@@ -71,6 +74,7 @@ static NSString * const kCellIdentify = @"cell";
 
 #pragma mark - getter and setter
 
+/*
 - (UITableView *)tableView
 {
     if (!_tableView) {
@@ -83,6 +87,8 @@ static NSString * const kCellIdentify = @"cell";
     }
     return _tableView;
 }
+
+*/
 
 #pragma mark - tableView Delegate and dataSource
 

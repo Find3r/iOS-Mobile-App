@@ -712,6 +712,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="112" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PUe-IZ-mc0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="112" id="Zxg-WP-NWW">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="112"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zxg-WP-NWW" id="vhN-tc-O10">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="111"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -723,6 +737,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Mi Perfil" id="7Q8-fZ-d1s"/>
                     <connections>
+                        <outlet property="tableView" destination="PUe-IZ-mc0" id="MyC-Uo-JRL"/>
                         <outlet property="vista" destination="lrv-hG-qg3" id="N7T-NK-5Sz"/>
                     </connections>
                 </viewController>
@@ -871,7 +886,6 @@
         <!--Mi Perfil-->
         <scene sceneID="YTD-cV-ffm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Whg-7V-fVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l08-yY-n0V" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mi Perfil" id="0Pm-h4-Y17"/>
                     <toolbarItems/>
@@ -884,6 +898,7 @@
                         <segue destination="wm0-mb-XLD" kind="relationship" relationship="rootViewController" id="ERc-zd-fYs"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Whg-7V-fVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1216" y="811"/>
         </scene>

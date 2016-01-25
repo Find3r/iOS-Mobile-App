@@ -61,6 +61,7 @@
         
         [_segmentControl setFrame:CGRectMake(10, 0.87*frame.size.height, frame.size.width - 20, frame.size.height*0.1)];
         [_segmentControl setSelectedSegmentIndex:0];
+        [_segmentControl setBackgroundColor:[UIColor colorWithRed:58 green:113 blue:255 alpha:1]];
        // [_segmentControl setLayoutMargins:UIEdgeInsetsMake(30, 30, 30, 30)];
         
         [self addSubview:_backImageView];
